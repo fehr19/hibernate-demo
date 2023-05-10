@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-//Demonstrates One to One relationship
+//Demonstrates One-to-One relationship
 public class App2 {
     public static void main(String[] args) {
         System.out.println("Maven + Hibernate + SQL One to One Mapping Annotations");

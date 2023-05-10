@@ -4,10 +4,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
 import java.util.ArrayList;
 import java.util.List;
-
+//Demonstrates One-to-Many relationship
 public class App {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
@@ -21,27 +20,27 @@ public class App {
         Department dep2= new Department();
         dep2.setDname("HR");
 
-        Professor t1 = new Professor();
+        Teacher t1 = new Teacher();
         t1.setSalary("1000");
-        t1.setProfessorName("MHaseeb");
+        t1.setTeachername("MHaseeb");
 
-        Professor t2 = new Professor();
+        Teacher t2 = new Teacher();
         t2.setSalary("2220");
-        t2.setProfessorName("Shahparan");
+        t2.setTeachername("Shahparan");
 
-        Professor t3 = new Professor();
+        Teacher t3 = new Teacher();
         t3.setSalary("30000");
-        t3.setProfessorName("James");
+        t3.setTeachername("James");
 
-        Professor t4 = new Professor();
+        Teacher t4 = new Teacher();
         t4.setSalary("40000");
-        t4.setProfessorName("Joseph");
+        t4.setTeachername("Joseph");
 
-        Professor t5 = new Professor();
+        Teacher t5 = new Teacher();
         t5.setSalary("200");
-        t5.setProfessorName("Ali");
+        t5.setTeachername("Ali");
 
-        List<Professor> teachlist = new ArrayList();
+        List<Teacher> teachlist = new ArrayList();
         teachlist.add(t1);
         teachlist.add(t2);
         teachlist.add(t3);

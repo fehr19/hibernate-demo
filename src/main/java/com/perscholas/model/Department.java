@@ -11,15 +11,15 @@ public class Department implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int did;
-    private String dname;
+    private String dName;
 
     @OneToMany(targetEntity= Professor.class, cascade = {CascadeType.ALL})
     private List teacherList;
 
-    public Department(int did, String dname) {
+    public Department(int did, String dName) {
         super();
         this.did = did;
-        this.dname = dname;
+        this.dName = dName;
     }
 
     public Department() {
@@ -41,11 +41,11 @@ public class Department implements Serializable {
         this.did = did;
     }
 
-    public String getDname() {
-        return dname;
+    public String getdName() {
+        return dName;
     }
 
-    public void setDname(String dname) {
-        this.dname = dname;
+    public void setdName(String dName) {
+        this.dName = dName;
     }
 }

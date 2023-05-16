@@ -11,16 +11,17 @@ public class Teacher implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int tit;
     private String salary;
-    private String Teachername;
-   /* @ManyToOne
-    @JoinColumn(name = "fk_dep")
-    private Department department;*/
+    private String teacherName;
 
-    public Teacher(int tit, String salary, String teachername) {
+    @ManyToOne
+    @JoinColumn(name = "fk_dep")
+    private Department department;
+
+    public Teacher(int tit, String salary, String teacherName) {
         super();
         this.tit = tit;
         this.salary = salary;
-        Teachername = teachername;
+        this.teacherName = teacherName;
     }
 
     public Teacher() {
@@ -42,11 +43,11 @@ public class Teacher implements Serializable {
         this.salary = salary;
     }
 
-    public String getTeachername() {
-        return Teachername;
+    public String getTeacherName() {
+        return teacherName;
     }
 
-    public void setTeachername(String teachername) {
-        Teachername = teachername;
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
     }
 }
